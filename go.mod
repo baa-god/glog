@@ -1,4 +1,4 @@
-module glog
+module github.com/baa-god/glog
 
 go 1.20
 
