@@ -21,14 +21,14 @@ var (
 )
 
 func init() {
-	defaultLogger.Store(New(os.Stdout, false))
+	defaultLogger.Store(New(os.Stdout))
 }
 
 type Logger struct {
 	*slog.Logger
 }
 
-func New(w io.Writer, dev bool) *Logger {
+func New(w io.Writer) *Logger {
 	opts := slog.HandlerOptions{
 		AddSource: true,
 		Level:     LevelTrace,
